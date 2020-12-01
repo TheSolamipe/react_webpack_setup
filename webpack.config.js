@@ -1,38 +1,38 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
-});
+// const htmlPlugin = new HtmlWebPackPlugin({
+//   template: "./src/index.html",
+//   filename: "./index.html"
+// });
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
-            {
-                loader: 'style-loader'
-            },
-            {
-                loader: 'css-loader',
-                options: {
-                    importLoaders: 1,
-                    modules: {
-                        localIdentName: '[name]__[local]___[hash:base64:5]'
-                    }
-                }
-            }
-        ]
-    }
-    ]
-  },
-  plugins: [htmlPlugin]
-};
+// module.exports = {
+//   module: {
+//     rules: [
+//       {
+//         test: /\.js$/,
+//         exclude: /node_modules/,
+//         use: {
+//           loader: "babel-loader"
+//         }
+//       },
+//       {
+//         test: /\.css$/,
+//         use: [
+//             {
+//                 loader: 'style-loader'
+//             },
+//             {
+//                 loader: 'css-loader',
+//                 options: {
+//                     importLoaders: 1,
+//                     modules: {
+//                         localIdentName: '[name]__[local]___[hash:base64:5]'
+//                     }
+//                 }
+//             }
+//         ]
+//     }
+//     ]
+//   },
+//   plugins: [htmlPlugin]
+// };
